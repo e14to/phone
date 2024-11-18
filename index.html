@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Information App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>phone</h1>
+            
+
+            <!-- Search Box -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by phone model..." onkeyup="searchPhones()">
+            </div>
+
+            <!-- Sorting and Filtering Controls -->
+            <div class="controls">
+                <button id="sortByName">Sort by Name</button>
+                <button id="sortByPrice">Sort by Price</button>
+                <select id="brandFilter">
+                    <option value="All">All Brands</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Google">Google</option>
+                    <option value="OnePlus">OnePlus</option>
+                    <option value="Xiaomi">Xiaomi</option>
+                </select>
+            </div>
+        </header>
+        
+        <div class="phone-list" id="phoneList">
+            <!-- Example Phone Information Card -->
+            <div class="phone-card">
+                <img src="phone1.jpg" alt="Phone 1">
+                <h3>Apple iPhone 13</h3>
+                <p>The iPhone 13 comes with an A15 Bionic chip and a stunning OLED display.</p>
+                <div class="price">$799</div>
+                
+                <!-- Show More Button -->
+                <a href="javascript:void(0);" class="show-more-btn" onclick="toggleInfo(this)">Show More</a>
+                
+                <!-- Hidden Additional Info -->
+                <div class="additional-info">
+                    <p><strong>Display:</strong> 6.1 inches OLED, 1170 x 2532 pixels</p>
+                    <p><strong>Battery:</strong> 3240mAh</p>
+                    <p><strong>Camera:</strong> 12 MP (wide), 12 MP (ultra-wide), 12 MP (front)</p>
+                    <p><strong>Processor:</strong> Apple A15 Bionic</p>
+                    <p><strong>OS:</strong> iOS 15</p>
+                </div>
+            </div>
+            
+            <!-- More phone cards would follow here in the same format -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe); /* Light blue to purple gradient */
+    color: #2c3e50;
+    padding: 0 15px;
+    line-height: 1.6;
+}
+
+/* Container for the content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #34495e;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #95a5a6;
+}
+
+/* Phone list styles */
+.phone-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Individual phone card */
+.phone-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.phone-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.phone-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Phone name and details */
+.phone-card h3 {
+    font-size: 1.6rem;
+    color: #34495e;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.phone-card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 12px;
+}
+
+/* Price Styling */
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+/* Show More button */
+.show-more-btn {
+    display: inline-block;
+    color: #3498db;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.show-more-btn:hover {
+    color: #2980b9;
+}
+
+/* Additional info section */
+.additional-info {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    text-align: left;
+    padding-left: 20px;
+    border-top: 1px solid #ecf0f1;
+    display: none; /* Hidden by default */
+}
+
+.additional-info.show {
+    display: block; /* Display when "Show More" is clicked */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .phone-list {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .phone-card {
+        width: 100%;
+        padding: 20px;
+    }
+}
